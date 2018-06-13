@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Capital</title>
+  </head>
+
+  <body>
+  <div class="output">
+      <ul>
+
+      </ul>
+  </div>
+  <script>
+  var list = document.querySelector('.output ul');
+list.innerHTML = '';
+var cities = ['lonDon',
+                 'ManCHESTer',
+                 'BiRmiNGHAM',
+                 'liVERpoOL'];
+for (var i = 0; i < cities.length; i++) {
+  //var input = cities[i];
+  var lrcase = cities[i].toLowerCase();
+  var flt = lrcase[0];
+  var fstltr = lrcase[0].toUpperCase();
+  var result = lrcase.replace(flt,fstltr);
+  
+  // Your conditional test needs to go inside the parentheses
+    var listItem = document.createElement('li');
+    listItem.textContent = result;
+    list.appendChild(listItem);
+}
+  </script>
+  </body>
+  </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Product Total</title>
+  </head>
+
+  <body>
+  <div class="output">
+      <table border='1'></table>
+      <p></p>
+  </div>
+  <script>
+  var list = document.querySelector('.output table');
+var totalBox = document.querySelector('.output p');
+var total = 0;
+list.innerHTML = '';
+totalBox.textContent = '';
+// number 1
+var products =  ['Underpants*xl:6.99',
+                'Socks*l:5.99',
+                'T-shirt*xxl:14.99',
+                'Trousers*m:31.99',
+                'Shoes*42:23.99'];
+            
+
+for (var i = 0; i < products.length; i++) { // number 2
+  // number 3
+  var name_price = products[i].split('*');  
+  console.log(name_price);
+  
+  var name = name_price[0];
+  console.log(name);
+  var size_price = name_price[1].split(':');
+  console.log(size_price);
+  var size = size_price[0];
+  var price = Number(size_price[1]);
+
+  // number 4
+  total += price;
+  // number 5
+  itemText = '<td>' + name + '</td>' + '<td>' + "$" + price + '</td>' + '<td>' + "Size: " + size + '</td>' ;
+  
+  var listItem = document.createElement('tr');
+  listItem.innerHTML = itemText;
+ 
+  list.appendChild(listItem);
+}
+totalBox.textContent = 'Total: $' + total.toFixed(0);
+
+  </script>
+  </body>
+  </html>
