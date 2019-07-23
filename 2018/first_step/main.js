@@ -12,7 +12,7 @@ var insertY = [ 'the soup kitchen',
                 'the White House'];
 var insertZ = ['spontaneously combusted',
                 'melted into a puddle on the sidewalk',
-                'turned into a slug and crawled away'];
+                'turned into a slug and crawled alone'];
 
 function randomValueFromArray(array){
   return array[Math.floor(Math.random()*array.length)];
